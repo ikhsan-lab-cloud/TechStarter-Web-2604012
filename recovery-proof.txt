@@ -1,0 +1,4 @@
+Nama : Ikhsan Al Ghufahri 
+NIM : 2604012
+Bukti : Project berhasil dipulihkan dari remote repository. 
+Penjelasan : File ini dibuat dari working copy hasil clone pada Pertemuan 4.
