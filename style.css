@@ -1,20 +1,6 @@
-/* body {
-    font-family: Arial, sans-serif;
-    max-width: 860px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6; 
-}
-
-a {margin-right: 16px;}
-
-figure img {
-    width: 50%;
-} */
-
-* {
-    box-sizing: border-box;
-}
+*, *::before, *::after { 
+  box-sizing: border-box; 
+} 
 
 html {
     scroll-behavior: smooth;
@@ -24,16 +10,14 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #1f2937;
+    background: #f5f7fa;
     line-height: 1.6;
 }
 
-/* header, main, footer {
-    width: min(900px, 92%);
-    margin: 0 auto;
-} */
-
-/* header {
-    padding: 40px 0 24px;
+/* Header */
+/* header, footer {
+  width: min(100% - 32px, 1100px); 
+  margin-inline: auto; 
 } */
 
 header {
@@ -50,10 +34,6 @@ nav {
     background-color: white;
     padding: 0.75rem 4%;
     text-decoration: none;
-    /* margin-right: 1rem;
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap; */
 }
 
 nav a {
@@ -67,10 +47,26 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.site-nav ul { 
+  display: flex; 
+  gap: 16px; 
+  flex-wrap: wrap; 
+  list-style: none; 
+  padding: 0; 
+} 
+/* Header END */
+
+
+/* Container */
 main {
-    width: min(92%, 900px);
+    /* width: min(92%, 900px); */
     margin: 0 auto;
     padding: 2rem 0 3rem;
+}
+
+.container { 
+  width: min(100% - 32px, 1100px); 
+  margin-inline: auto; 
 }
 
 section {
@@ -79,6 +75,7 @@ section {
 }
 
 .card {
+    flex: 1 1 260px; 
     background-color: white;
     border: 1px solid #dbe2ea;
     border-radius: 10px;
@@ -86,9 +83,16 @@ section {
     margin-bottom: 1rem;
 }
 
+.card-list { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 16px; 
+} 
+
 img {
     max-width: 100%;
     height: auto;
+    display: block; 
 }
 
 h1, h2, h3 {
@@ -110,22 +114,20 @@ p {
     margin-top: 0;
 }
 
+/* Container END */
+
+
+/* FOOTER */
 footer {
     background: #e9eef5; 
     padding: 1.25rem 4%;
 } 
 
-/* section p {
-    color: #374151;
-} */
-
 .highlight {
     color: #0b6b3a;
 }
 
-/* #tentang p {
-    color: #8b1e3f;
-} */
+/* FOOTER END */
 
 /* .note { 
 border-left: 4px solid #17365d; 
@@ -134,3 +136,20 @@ border-left: 4px solid #17365d;
 .note { 
 border-left-color: #c07a00; 
 } */
+
+@media (max-width: 700px) { 
+  .hero { 
+    padding: 32px 0; 
+  } 
+ 
+  .hero-actions { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+  } 
+ 
+  .hero-actions a { 
+    width: 100%; 
+    text-align: center; 
+  } 
+} 
